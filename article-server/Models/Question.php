@@ -17,7 +17,7 @@ Class Question
       }
   }
 
-  function checkQuestion($conn,$question)
+  static function checkQuestion($conn,$question)
   {
     $query = "SELECT * FROM questions WHERE question = ?";
         $stmt = $conn->prepare($query);
