@@ -47,6 +47,7 @@ signup_button.addEventListener("click", async () => {
 }
 )
 
+// Submit FAQ button
 submit_faq_button.addEventListener('click', async () => {
   const form = new FormData();
 
@@ -65,3 +66,37 @@ submit_faq_button.addEventListener('click', async () => {
   }
 
 });
+
+// Home Page
+document.addEventListener("DOMContentLoaded", async () => {
+      const response = await axios.post("http://localhost/FAQ-ten-deploys-per-day--flickr/article-server/API/searchQuestion.php", ' ');
+      const faq = document.getElementById("faq-box");
+      faq.innerHTML = "";
+
+      if (response.data && response.data.length > 0) {
+          response.data.forEach(fq => {
+              faq.innerHTML += `
+                  <div class="faq-box">
+                      <p class="question">Q: ${fq.question}</p>
+                      <p class="answer">A: ${fq.answer}</p>
+                  </div>
+              `;
+          });
+      }
+  }
+);
+
+// Home Page
+const search_bar_input = document.getElementById("Search-Bar");
+const add_faq_button = document.getElementById("Add-FAQ");
+
+// Add FAQ button
+add_faq_button.addEventListener('click', async () => {
+  window.location.href = "addfaq.html";
+});
+
+// Search bar
+search_bar_input.addEventListener("input", async () => {
+  const form = new FormData();
+  form.append("searchInput", search_bar_input.value);
+})
