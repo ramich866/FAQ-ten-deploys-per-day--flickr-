@@ -1,0 +1,39 @@
+.primary-bg {
+  background-color: #4c8eea;
+}
+
+.dark-gray-bg {
+  background-color: #2a2a2a;
+}
+
+.gray-bg {
+  background-color: #3e3e3e;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.grey-bg {
+  background-color: #f3f3f6;
+}
+
+.primary-txt {
+  color: #4c8eea;
+}
+
+.black-txt {
+  color: #0d0c22;
+}
+
+.white-txt {
+  color: white;
+}
+
+.grey-txt {
+  color: gray;
+}
+
+.error-txt {
+  color: red;
+}
