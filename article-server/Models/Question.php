@@ -5,7 +5,7 @@ require_once("/QuestionSkeleton.php");
 
 Class Question 
 {
-  public static function createQuestion($conn, $question, $answer)
+  public static function createFaq($conn, $question, $answer)
   {
       $query = "INSERT INTO questions (question, answer) VALUES (?, ?)";
       $stmt = $conn->prepare($query);
