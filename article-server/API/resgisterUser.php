@@ -12,3 +12,15 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 $user = User::insertUser($conn, $username, $email, $password);
+
+if($user) {
+  echo json_encode([
+    "status" => "success"
+  ]);
+}
+  else {
+    echo json_encode([
+    "status" => "error",
+    "message" => "Invalid input"
+  ]);
+}

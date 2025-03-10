@@ -14,12 +14,13 @@ $user = User::checkUsername($conn, $username);
 
 if ($user) {
   echo json_encode([
-      "user" => [
-          "id" => $user->getId(),
-          "username" => $user->getUsername(),
-          "email" => $user->getEmail(),
-          "password" => $user-> getHashedPassword() 
-      ]
+    "user" => [
+        "id" => $user->getId(),
+        "username" => $user->getUsername(),
+        "email" => $user->getEmail(),
+        "password" => $user-> getHashedPassword() 
+    ],
+    "status" => "success"
   ]);
 } else {
   echo json_encode([
