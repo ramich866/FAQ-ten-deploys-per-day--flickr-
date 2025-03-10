@@ -1,5 +1,5 @@
 <?php
-require_once("../../Connection/connection.php");
+require("../../Connection/connection.php");
 
 $query = "CREATE TABLE questions (
 id INT(11) AUTO_INCREMENT PRIMARY KEY,
